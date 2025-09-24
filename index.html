@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Głosuj na Bartosza Hirowskiego - Twój Przyszły Przewodniczący!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="stars"></div>
+        <div class="hero-content">
+            <div class="toothless-container">
+                <div class="toothless-image"></div>
+            </div>
+            <h1 class="glowing-title">BARTOSZ HIROWSKI</h1>
+            <h2 class="subtitle">Klasa 8B - Na Przewodniczącego Szkoły!</h2>
+            <p class="hero-text">Razem polecimy ku lepszej szkole! 🐉</p>
+            <button class="cta-button" id="startGame">🎮 Zagraj i Pozbieraj Głosy!</button>
+        </div>
+    </header>
+
+    <!-- Campaign Platform -->
+    <section class="platform">
+        <div class="container">
+            <h2 class="section-title">Moje Obietnice</h2>
+            <div class="promises-grid">
+                <div class="promise-card">
+                    <div class="promise-icon">🍕</div>
+                    <h3>Lepsza Stołówka</h3>
+                    <p>Pizza w piątki i więcej ulubionych potraw!</p>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">🎮</div>
+                    <h3>Więcej Zabawy</h3>
+                    <p>Turniele gier i konkursy dla wszystkich!</p>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">📚</div>
+                    <h3>Mniej Stresu</h3>
+                    <p>Pomoc w nauce i więcej czasu na odpoczynek!</p>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">🎨</div>
+                    <h3>Kreatywność</h3>
+                    <p>Zajęcia artystyczne i warsztaty dla każdego!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini Game Section -->
+    <section class="game-section" id="gameSection">
+        <div class="container">
+            <h2 class="section-title">Mini-Gra: Złap Głosy!</h2>
+            <div class="game-container" id="gameContainer">
+                <div class="game-ui">
+                    <div class="score">Głosy: <span id="score">0</span></div>
+                    <div class="timer">Czas: <span id="timer">30</span>s</div>
+                </div>
+                <div class="game-area" id="gameArea">
+                    <div class="player-toothless" id="playerToothless">
+                        🐲
+                    </div>
+                </div>
+                <div class="game-instructions">
+                    <p>Poruszaj myszą/palcem żeby sterować Szczerbatkiem!</p>
+                    <p>Łap spadające głosy i zdobywaj punkty!</p>
+                </div>
+                <button class="start-game-btn" id="startGameBtn">START</button>
+                <div class="game-over" id="gameOver">
+                    <h3>Koniec Gry!</h3>
+                    <p>Zdobyłeś <span id="finalScore">0</span> głosów!</p>
+                    <button class="restart-btn" id="restartBtn">Zagraj Ponownie</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Razem Polecimy Wysoko! 🚀</h2>
+            <p>Oddaj swój głos na Bartosza Hirowskiego i zmieńmy naszą szkołę razem!</p>
+            <div class="vote-buttons">
+                <button class="vote-btn primary">✅ GŁOSUJĘ!</button>
+                <button class="vote-btn secondary" id="shareBtn">📢 Powiedz Znajomym</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Kampania Bartosza Hirowskiego - Twój Przyszły Przewodniczący!</p>
+    </footer>
+
+    <!-- Share Modal -->
+    <div class="share-modal" id="shareModal">
+        <div class="share-modal-content">
+            <div class="share-header">
+                <h3>📢 Podziel się z znajomymi!</h3>
+                <button class="close-share" id="closeShare">&times;</button>
+            </div>
+            <div class="copy-link-section">
+                <div class="link-input">
+                    <input type="text" id="shareUrl" value="" readonly>
+                    <button id="copyLinkBtn">📋 Kopiuj link</button>
+                </div>
+                <div class="copy-feedback" id="copyFeedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
